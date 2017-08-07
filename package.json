@@ -1,0 +1,17 @@
+{
+  "name": "create-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "author": "Dohdoh de Leon <ronald@codingzombies.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  },
+  "dependencies": {
+    "axios": "^0.16.2"
+  }
+}

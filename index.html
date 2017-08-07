@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+</head>
+<body>
+
+    <!-- currently does not work in chrome but works in safari -->
+    <script type="text/javascript" src="./node_modules/axios/dist/axios.js"></script>
+    <script type="text/javascript" src="create-api.js">
+    </script>
+    <script type="text/javascript">
+      const delay = (fn, ms) => {
+        setTimeout(fn, ms);
+      }
+
+      let api = createApi('http://localhost:3002/tires', {}, responseHandler)
+      api.findAll();
+      delay(() => api.find(1), 1000);
+      delay(() => api.findByBrand('Michelin'), 2000);
+      delay(() => api.findByInStockAndPrice(true, { gte: 100, lte: 130 }), 3000);
+
+    </script>
+</body>
+</html>
